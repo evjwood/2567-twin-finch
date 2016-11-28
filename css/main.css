@@ -1,8 +1,219 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body {
-	background-color: #2D4059;	
+/*--------------------------------------------------------------
+>>> CSS STANDARDS
+----------------------------------------------------------------
+1. Place in appropriate section
+2. Add new sections to the Table of Contents
+3. Order properties alphabetically inside each declaration
+4. Declaration selectors should each occupy a new line
+5. Enter one new line between declarations
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+2.0 - Navigation Menus
+	2.1 - Main Menu
+	2.2 - Sub Menu
+	2.3 - Footer Menu
+3.0 - Content
+	3.1 - Site Structure (Site Header, Advertisement, Site Footer)
+	3.2 - Section Name
+	3.3 - Section Name
+4.0 - Media
+5.0 - Utility
+	5.1 - Background Colors
+	5.2 - Text Colors
+	5.3 - Text Sizes
+	5.4 - Alignments
+--------------------------------------------------------------*/
+
+
+
+
+/*--------------------------------------------------------------
+1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */
+
+
+body { 
+	font-family: Georgia,Times,Times New Roman,serif;
+	color: #2C2C30;
+	font-variant-ligatures: normal; 
+}
+
+h1, h2, h3, a {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#about h2 {
+	color: #fff;
+}
+
+h2, .bg-blue a {
+	color: #B2D6B5;
+}
+
+h3 {
+	color: #5F6E75;
+}
+
+h2, #intro {
+	text-align: center;
+}
+
+/*-- 1.1 - Headings --*/
+
+h1, h2 {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-weight: 400;
+	letter-spacing: 2px;
+	padding: 25px;
+	border: 5px solid rgba(255, 255, 255, 0.8);
+	display: inline-block;
+	font-size: 3.5rem;
+	color: rgba(255, 255, 255, 0.8)
+}
+
+/*-- 1.2 - Body Copy --*/
+
+.lead-in {
+	text-align: center;
+	font-weight: 700;
+}
+
+p {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+blockquote {
+	font-size: 3rem;
+	
+}
+
+/*-- 1.3 - Buttons --*/
+
+a {
+	text-decoration: none;
+}
+
+nav a {
+	padding: 7px;
+}
+
+nav a:hover {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #2C2C30;
+}
+/*-- 1.4 - Forms --*/
+
+/*-- 1.5 - Lists --*/
+
+.bg-blue li {
+	display: inline-block;
+}
+
+
+/*-- 1.6 - Tables --*/
+
+/*--------------------------------------------------------------
+2.0 - NAVIGATION MENUS
+-------------------------------------------------------------- */
+
+/*-- 2.1 - Main Menu --*/
+
+/*-- 2.2 - Sub Menu --*/
+
+/*-- 2.3 - Footer Menu --*/
+
+/*--------------------------------------------------------------
+3.0 - CONTENT
+-------------------------------------------------------------- */
+
+/*-- 3.1 - Site Structure (Site Header, Advertisement, Site Footer) --*/
+
+.clear {
+	clear: both;
+}
+
+/*-- 3.2 - Section Name --*/
+
+/*-- 3.3 - Section Name --*/
+
+/*--------------------------------------------------------------
+4.0 - MEDIA
+-------------------------------------------------------------- */
+
+#hero {
+	background: url(../img/hero-img.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 400px;
+}
+
+.roast-img {
+	background-color: #BCBCBC;
+}
+
+
+#about {
+	background-color: #A9C1C9;
+}
+
+/*--------------------------------------------------------------
+5.0 - UTILITY
+-------------------------------------------------------------- */
+
+/*-- 5.1 - Background Colors --*/
+
+.bg-blue {
+	background-color: #2C2C30;
+}
+
+.bg-green {
+	background-color: #B2D6B5;
+}
+
+header[class="row"] {
+	background-color: #B2D6B5;
+	padding: 0 15px;
+}
+
+/*-- 5.2 - Text Colors --*/
+
+/*-- 5.3 - Text Sizes --*/
+
+/*-- 5.4 - Alignments --*/
+.foot-stop {
+	height: 25px;
+}
+
+.col-center {
+	margin: 0 auto;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
 }
 
 *, *:after, *:before {
@@ -14,7 +225,6 @@ body {
 }	
 
 .wrapper {
-	background-color: #343434;
 	margin: 0 auto;
 	width: 70%;	
 }
@@ -155,7 +365,7 @@ img, .col-1-1 {
 /* Tablet break-point */ 
 @media (max-width: 480px) {
 	.wrapper {
-		width: 90%;	
+		width: 94%;	
 	}
 	
 	.col-1-4, .col-1-10 {
