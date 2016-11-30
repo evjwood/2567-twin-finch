@@ -130,7 +130,19 @@ nav a:hover {
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #2C2C30;
 }
+
+#newsletter form, #newsletter p, #contact p {
+	display: inline;
+}
 /*-- 1.4 - Forms --*/
+
+#newsletter label {
+	display: none;
+}
+
+#contact header a {
+	display: block;
+}
 
 /*-- 1.5 - Lists --*/
 
@@ -209,6 +221,19 @@ li {
 	background: url(../img/logo.png) no-repeat;
 }
 
+.roast-img {
+	background: url(../img/img-packaging.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 150px;
+}
+
+#map {
+	background-color: #C0C0C0;
+}
+
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
@@ -234,6 +259,20 @@ header[class="row"] {
 
 /*-- 5.4 - Alignments --*/
 
+
+.flex {
+    display: -webkit-flex;
+    display: -mz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: flex;
+    overflow: hidden;
+}
+
+.flex .col-1-3 header {
+	flex: 1;
+}
+
 .foot-stop {
 	height: 25px;
 }
@@ -246,7 +285,7 @@ header[class="row"] {
 	float: right;
 }
 
-.col-1-3.full, .col-2-3.full {
+.col-2-5.full, .col-3-5.full {
 	width: 100%
 }
 
@@ -414,12 +453,12 @@ img, .col-1-1 {
 		width: 100%;
 	}
 	
-	.col-1-3.full {
-		width: 33.33%
+	.col-2-5.full {
+		width: 40%
 	}
 	
-	.col-2-3.full {
-		width: 66.66%;
+	.col-3-5.full {
+		width: 60%;
 	}
 	
 	.col-1-4, .col-1-10 {
@@ -452,6 +491,15 @@ img, .col-1-1 {
 
 	.col-1-9, .col-1-6, .col-1-12 {
 		width: 33.33%;
+	}
+	
+	nav li {
+		display: block;
+		
+	}	
+	
+	.flex {
+		display: inherit;
 	}
 }
 
