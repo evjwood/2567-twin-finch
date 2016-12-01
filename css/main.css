@@ -46,7 +46,7 @@
 -------------------------------------------------------------- */
 
 
-body { 
+body, #about a { 
 	font-family: Georgia,Times,Times New Roman,serif;
 	color: #2C2C30;
 	font-variant-ligatures: normal; 
@@ -57,15 +57,15 @@ h1, h2, h3, a {
 	font-family: 'Montserrat', sans-serif;
 }
 
-#about h2 {
+h2, #hero a, #products a:hover, #newsletter a {
 	color: #fff;
 }
 
-h2, .bg-blue a {
+h2, .bg-blue a, .products a, #hero a:hover, #products a, #contact a {
 	color: #B2D6B5;
 }
 
-h3, blockquote, .location {
+h3, blockquote, .location, #about a:hover {
 	color: #5F6E75;
 }
 
@@ -77,13 +77,13 @@ h1, blockquote footer {
 	font-weight: 400;
 }
 
-.lead-in, blockquote, .location {
+.lead-in, blockquote, .location, #about a {
 	font-weight: 700;
 }
 
 /*-- 1.1 - Headings --*/
 
-h1, h2 {
+h1, h2, #hero a, #products a {
 	text-transform: uppercase;
 }
 
@@ -96,9 +96,15 @@ h1 {
 	color: rgba(255, 255, 255, 0.9)
 }
 
+h2 {
+	font-size: 1.75rem;
+}
+
+#products h3 {
+	color: #2C2C30;
+}
+
 /*-- 1.2 - Body Copy --*/
-
-
 
 p {
 	font-size: 1.125rem;
@@ -116,6 +122,10 @@ blockquote footer {
 	font-size: 1.125rem;
 }
 
+#products span {
+	font-size: 1rem;
+}
+
 /*-- 1.3 - Buttons --*/
 
 a {
@@ -131,6 +141,26 @@ nav a:hover {
 	color: #2C2C30;
 }
 
+#hero a, #newsletter a {
+	border: 2px solid #fff;
+}
+
+#hero a, #products a, #contact a, #newsletter a {
+	padding: 7px 15px;
+}
+
+#hero a:hover, #newsletter a:hover {
+	background-color: #fff;
+}
+
+#products a, #contact p a {
+	border: 2px solid #B2D6B5;
+}
+
+#products a:hover {
+	background-color: #B2D6B5;
+}
+
 #newsletter form, #newsletter p, #contact p {
 	display: inline;
 }
@@ -143,6 +173,12 @@ nav a:hover {
 #contact header a {
 	display: block;
 }
+
+#about a {
+	text-decoration: underline;
+}
+
+
 
 /*-- 1.5 - Lists --*/
 
@@ -214,7 +250,11 @@ li {
 }
 
 #about {
-	background-color: #A9C1C9;
+	background: url(../img/about-img.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #logo {
@@ -445,6 +485,9 @@ img, .col-1-1 {
 
 /* Tablet break-point */ 
 @media (max-width: 480px) {
+	
+	
+	
 	.wrapper {
 		width: 94%;	
 	}
@@ -482,7 +525,7 @@ img, .col-1-1 {
 	}
 	
 	.col-5-6 {
-		width: 80%	
+		width: 100%	
 	}
 
 	.col-1-7, .col-1-11 {
