@@ -61,7 +61,7 @@ h2, #hero a, #products a:hover, #newsletter a {
 	color: #fff;
 }
 
-h2, .bg-blue a, .products a, #hero a:hover, #products a, #contact a {
+h2, .bg-blue a, .products a, #hero a:hover, #products a, #contact a, #newsletter a:hover {
 	color: #B2D6B5;
 }
 
@@ -69,11 +69,11 @@ h3, blockquote, .location, #about a:hover {
 	color: #5F6E75;
 }
 
-h2, #intro, blockquote {
+h2, #intro, blockquote, #products .lead-in {
 	text-align: center;
 }
 
-h1, blockquote footer {
+h1, blockquote footer, #products span {
 	font-weight: 400;
 }
 
@@ -92,16 +92,22 @@ h1 {
 	padding: 15px 25px;
 	border: 5px solid rgba(255, 255, 255, 0.8);
 	display: inline-block;
-	font-size: 2.75rem;
-	color: rgba(255, 255, 255, 0.9)
+	font-size: 2.5rem;
+	color: rgba(255, 255, 255, 0.9);
+	margin-top: 125px;
 }
 
 h2 {
 	font-size: 1.75rem;
+	margin-top: 40px;
 }
 
 #products h3 {
 	color: #2C2C30;
+}
+
+#hero .row p {
+	font-size: 1.25rem;
 }
 
 /*-- 1.2 - Body Copy --*/
@@ -141,6 +147,10 @@ nav a:hover {
 	color: #2C2C30;
 }
 
+#hero a {
+	margin-bottom: 100px;
+}
+
 #hero a, #newsletter a {
 	border: 2px solid #fff;
 }
@@ -151,6 +161,10 @@ nav a:hover {
 
 #hero a:hover, #newsletter a:hover {
 	background-color: #fff;
+}
+
+#hero a:first-child {
+	margin-right: 15px;
 }
 
 #products a, #contact p a {
@@ -178,13 +192,38 @@ nav a:hover {
 	text-decoration: underline;
 }
 
+::-webkit-input-placeholder {
+   	font-style: italic;
+	font-size: .75rem;
+}
 
+:-moz-placeholder { /* Firefox 18- */
+   	font-style: italic; 
+	font-size: .75rem;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   	font-style: italic;  
+	font-size: .75rem;
+}
+
+:-ms-input-placeholder {  
+   	font-style: italic; 
+	font-size: .75rem;
+}
+
+input {
+	border: 2px solid #5F6E75;
+	border-radius: 5px;
+	padding: 3px 0;
+}
 
 /*-- 1.5 - Lists --*/
 
-li {
+li, #hero a, h1, h2, #contact ul {
 	display: inline-block;
 }
+
 
 
 /*-- 1.6 - Tables --*/
@@ -220,7 +259,7 @@ li {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	height: 500px;
+	background-attachment: fixed;
 }
 
 #icon-fb {
@@ -255,10 +294,12 @@ li {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+	background-attachment: fixed;
 }
 
 #logo {
 	background: url(../img/logo.png) no-repeat;
+	height: 60px;
 }
 
 .roast-img {
@@ -543,6 +584,10 @@ img, .col-1-1 {
 	
 	.flex {
 		display: inherit;
+	}
+	
+	h1, #hero p, #hero  {
+		text-align: center;
 	}
 }
 
