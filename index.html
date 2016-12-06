@@ -14,24 +14,24 @@
 <body>
 <!-- Header Nav -->
 <header>
-	<section class="bg-blue">
+	<div class="bg-blue">
 		<div class="wrapper">
 			<div class="row">
 				<div class="col-1-9">
 					<a href="#"><img src="img/logo.png" alt="twin finch logo"></a>
 				</div>
-				<nav class="f-right header-nav">
+				<nav class="col-1-2 f-right header-nav">
 					<ul>
 						<li><a href="#about">About</a></li>
-						<li><a href="#purchase">Purchase</a></li>
+						<li><a href="#products">Purchase</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>	
 				</nav>
 			</div>
 		</div>
-	</section>
+	</div>
 <!-- Hero -->
-	<section id="hero">
+	<div id="hero">
 		<div class="wrapper">
 				<h1>Twin Finch Roastery</h1>
 			<div class="row">
@@ -42,141 +42,136 @@
 			<p><a href="#purchase">Order</a>
 			<a href="#about">Learn More</a></p>
 		</div>
-	</section>
+	</div>
 </header>
 <!-- Products -->
-<div class="wrapper">
-	<section id="products">
-		<header>
-			<h2>Our Products</h2>
-			<p class="lead-in">Our house blend was rated a 98 by coffeereview.com!</p>
-			<div class="col-2-3 col-center sm">
-				<p id="intro">We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
+<section class="wrapper" id="products">
+	<header>
+		<h2>Our Products</h2>
+		<p class="lead-in">Our house blend was rated a 98 by coffeereview.com!</p>
+		<div class="col-2-3 col-center sm">
+			<p id="intro">We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
+		</div>
+	</header>
+	<div class="row flex">
+		<!-- Roast 1 -->
+		<section class="col-1-2 sm">
+			<header class="row">
+				<div class="col-2-3">
+					<h3>Finch House Blend<span> (light)</span></h3>
+				</div>
+				<div class="col-1-3 f-right">
+					<p class="price">$17.95/lb</p>
+				</div>
+			</header>
+			<div class="row">
+				<div class="col-2-5 roast-img">
+				</div>
+				<div class="f-right col-3-5">
+					<header>
+						<p class="location">Cajamarca &amp; Moyobamba Regions, Peru</p>
+					</header>
+					<p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
+					<p><a href="#">Buy</a></p>
+				</div>
 			</div>
-		</header>
-		<div class="row">
-			<!-- Roast 1 -->
-			<section class="col-1-2 sm">
+		</section>
+		<!-- Roast 2 -->
+		<section class="f-right col-1-2 sm">
+			<header class="row">
+				<div class="col-2-3">
+					<h3>Evening Oak<span> (medium-dark)</span></h3>
+				</div>
+				<div class="col-1-3 f-right">
+					<p class="price">$19.95/lb</p>
+				</div>
+			</header>
+			<div class="row">
+				<div class="col-2-5 roast-img">
+				</div>
+				<div class="f-right col-3-5">
+					<header>
+						<p class="location">Eastern Java, Indonesia</p>
+					</header>
+					<p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
+					<p><a href="#">Buy</a></p>
+				</div>
+			</div>
+		</section>
+	</div>
+	<blockquote class="col-5-6 col-center">
+		<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure…”</p>
+		<footer>—Coffee Review</footer>
+	</blockquote>
+	<div class="row flex">
+			<!--Roast 3-->
+			<section class="col-1-3 sm">
 				<header class="row">
 					<div class="col-2-3">
-						<h3>Finch House Blend<span> (light)</span></h3>
+						<h3>Sunrise<span> (light)</span></h3>
 					</div>
 					<div class="col-1-3 f-right">
-						<p>$17.95/lb</p>
+						<p class="price">$17.95/lb</p>
 					</div>
 				</header>
 				<div class="row">
-					<div class="col-2-5 roast-img">
+					<div class="col-2-5 roast-img full">
 					</div>
-					<div class="f-right col-3-5">
+					<div class="f-right col-3-5 full">
 						<header>
-							<p class="location">Cajamarca &amp; Moyobamba Regions, Peru</p>
+							<p class="location">La Chiapas, Mexico</p>
 						</header>
-						<p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
+						<p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
 						<p><a href="#">Buy</a></p>
 					</div>
 				</div>
 			</section>
-			<!-- Roast 2 -->
-			<section class="f-right col-1-2 sm">
+			<!-- Roast 4-->
+			<section class="col-1-3 sm">
 				<header class="row">
 					<div class="col-2-3">
-						<h3>Evening Oak<span> (medium-dark)</span></h3>
+						<h3>Midnight<span> (dark)</span></h3>
 					</div>
 					<div class="col-1-3 f-right">
-						<p>$19.95/lb</p>
+						<p class="price">$17.95/lb</p>
 					</div>
 				</header>
 				<div class="row">
-					<div class="col-2-5 roast-img">
+					<div class="col-2-5 roast-img full">
 					</div>
-					<div class="f-right col-3-5">
+					<div class="f-right col-3-5 full">
 						<header>
-							<p class="location">Eastern Java, Indonesia</p>
+							<p class="location">Latin America</p>
 						</header>
 						<p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
 						<p><a href="#">Buy</a></p>
 					</div>
 				</div>
 			</section>
-		</div>
-		<div class="col-5-6 col-center">
-			<blockquote>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure…” 
-				<footer>—Coffee Review</footer>
-			</blockquote>
-		</div>
-		<div class="row">
-			<div class="flex">
-				<!--Roast 3-->
-				<section class="col-1-3 sm">
-					<header class="row">
-						<div class="col-2-3">
-							<h3>Sunrise<span> (light)</span></h3>
-						</div>
-						<div class="col-1-3 f-right">
-							<p>$17.95</p>
-						</div>
-					</header>
-					<div class="row">
-						<div class="col-2-5 roast-img full">
-						</div>
-						<div class="f-right col-3-5 full">
-							<header>
-								<p class="location">La Chiapas, Mexico</p>
-							</header>
-							<p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
-							<p><a href="#">Buy</a></p>
-						</div>
+			<!-- Roast 5 -->
+			<section class="f-right col-1-3 sm">
+				<header class="row">
+					<div class="col-2-3">
+						<h3>Espresso</h3>
 					</div>
-				</section>
-				<!-- Roast 4-->
-				<section class="col-1-3 sm">
-					<header class="row">
-						<div class="col-2-3">
-							<h3>Midnight<span> (dark)</span></h3>
-						</div>
-						<div class="col-1-3 f-right">
-							<p>$17.95</p>
-						</div>
-					</header>
-					<div class="row">
-						<div class="col-2-5 roast-img full">
-						</div>
-						<div class="f-right col-3-5 full">
-							<header>
-								<p class="location">Latin America</p>
-							</header>
-							<p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
-							<p><a href="#">Buy</a></p>
-						</div>
+					<div class="col-1-3 f-right">
+						<p class="price">$19.95/lb</p>
 					</div>
-				</section>
-				<!-- Roast 5 -->
-				<section class="f-right col-1-3 sm">
-					<header class="row">
-						<div class="col-2-3">
-							<h3>Espresso</h3>
-						</div>
-						<div class="col-1-3">
-							<p>$19.95/lb</p>
-						</div>
-					</header>
-					<div class="row">
-						<div class="col-2-5 roast-img full">
-						</div>
-						<div class="f-right col-3-5 full">
-							<header>
-								<p class="location">Latin America, Africa, Indonesia</p>
-							</header>
-							<p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
-							<p><a href="#">Buy</a></p>
-						</div>
+				</header>
+				<div class="row">
+					<div class="col-2-5 roast-img full">
 					</div>
-				</section>
-			</div>
-		</div>
-	</section>
-</div>
+					<div class="f-right col-3-5 full">
+						<header>
+							<p class="location">Latin America, Africa, Indonesia</p>
+						</header>
+						<p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
+						<p><a href="#">Buy</a></p>
+					</div>
+				</div>
+			</section>
+	</div>
+</section>
 <!-- About -->
 <section id="about">
 	<div class="wrapper">
@@ -208,65 +203,63 @@
 <div class="bg-green">
 	<div class="wrapper">
 		<section class="row" id="newsletter">
-			<div class="row">
 				<div class="col-1-4 sm">
 					<header>
 						<h3>Join our mailing list</h3>
 					</header>
 				</div>
-				<div class="col-3-4 f-right sm">
-					<form>
+					<form class="col-3-4 f-right sm">
 						<label for="news-email">Enter email address</label>
 						<input type="text" name="email" placeholder="email@address.com" id="news-email">
 						<p><a href="http://www.google.com" target="_blank">Sign Up</a></p>
 					</form>
-				</div>
-			</div>
 		</section>
 	</div>
 </div>
 
 <footer class="wrapper">
-	<div class="row">
-		<!-- Contact -->
-		<section class="col-1-2 sm" id="contact">
-				<h2>Contact Us</h2>
-				<ul>
-					<li><a href="http://www.facebook.com" target="_blank" id="icon-fb"></a></li>
-					<li><a href="http://www.twitter.com" target="_blank" id="icon-twitter"></a></li>
-					<li><a href="http://www.google.com" target="_blank" id="icon-google"></a></li>
-				</ul>
-			<form>
-				<div class="row">
-					<div class="col-1-2 sm">
-						<label for="name">Name</label>
-						<input type="text" name="name" placeholder="John Smith" id="name">
+	<div class="row flex">
+			<!-- Contact -->
+			<section class="col-1-2 sm" id="contact">
+					<h2>Contact Us</h2>
+					<ul>
+						<li><a href="http://www.facebook.com" target="_blank" id="icon-fb"></a></li>
+						<li><a href="http://www.twitter.com" target="_blank" id="icon-twitter"></a></li>
+						<li><a href="http://www.google.com" target="_blank" id="icon-google"></a></li>
+					</ul>
+				<form>
+					<div class="row">
+						<div class="col-1-2 sm">
+							<label for="name">Name</label>
+							<input type="text" name="name" placeholder="John Smith" id="name">
+						</div>
+						<div class="f-right col-1-2 sm">
+							<label for="email">Email</label>
+							<input type="text" name="email" placeholder="email@address.com" id="email">
+						</div>
 					</div>
-					<div class="f-right col-1-2 sm">
-						<label for="email">Email</label>
-						<input type="text" name="email" placeholder="email@address.com" id="email">
+					<div class="row">
+						<div class="col-3-4"><p>Comment</p>
+							<textarea placeholder="Your comment here..."></textarea>
+						</div>
+						<div class="col-1-4">
+							<p><a href="http://www.google.com" target="_blank">Send</a></p>
+						</div>
+					</div>
+				</form>
+			</section>
+			<!-- Map -->
+			<section class="f-right col-1-2 sm">
+				<div id="map">
+					<div class="col-2-5">
+						<h3>Our Location</h3>
+						<p>You can buy from us directly at our Portland storefront located at <a href="https://www.google.com/maps/place/457+SE+Market+St,+Portland,+OR+97214/@45.510812,-122.6634465,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a74b98e8639:0x44d8f9db320c9b4!8m2!3d45.510812!4d-122.6612525" target="_blank">457 NW Market Street.</a></p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="3-4"><p>Comment</p>
-						<textarea placeholder="Your comment here..."></textarea>
-					</div>
-					<div class="1-4">
-						<p><a href="http://www.google.com" target="_blank">Send</a></p>
-					</div>
-				</div>
-			</form>
-		</section>
-		<!-- Map -->
-		<section class="f-right col-1-2 sm" id="map">
-			<div class="col-1-3">
-				<h3>Our Location</h3>
-				<p>You can buy from us directly at our Portland storefront located at <a href="https://www.google.com/maps/place/457+SE+Market+St,+Portland,+OR+97214/@45.510812,-122.6634465,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a74b98e8639:0x44d8f9db320c9b4!8m2!3d45.510812!4d-122.6612525" target="_blank">457 NW Market Street.</a></p>
-			</div>
-		</section>
+			</section>
 	</div>
 </footer>
-<div class="foot-stop bg-blue"></div>
+<div class="bg-blue"></div>
 
 
 
