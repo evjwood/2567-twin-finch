@@ -48,26 +48,17 @@
 
 body, #about a, #map a { 
 	font-family: Georgia,Times,Times New Roman,serif;
-	color: #2C2C30;
 	font-variant-ligatures: normal; 
 	-webkit-font-smoothing: antialiased;
 }
+
+
 
 h1, h2, h3, a, label, #contact p {
 	font-family: 'Montserrat', sans-serif;
 }
 
-h2, #hero a, #products a:hover, #newsletter a {
-	color: #fff;
-}
 
-h2, .bg-blue a, .products a, #hero a:hover, #products a, #contact a, #newsletter a:hover {
-	color: #B2D6B5;
-}
-
-h3, blockquote, .location, #about a:hover {
-	color: #5F6E75;
-}
 
 h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in {
 	text-align: center;
@@ -81,11 +72,11 @@ h1, blockquote footer, #products span {
 	font-weight: 700;
 }
 
-/*-- 1.1 - Headings --*/
-
 h1, h2, #hero a, #products a {
 	text-transform: uppercase;
 }
+
+/*-- 1.1 - Headings --*/
 
 h1 {
 	letter-spacing: 2px;
@@ -102,20 +93,10 @@ h2 {
 	margin: 50px 0 15px;
 }
 
-#products h3 {
-	color: #2C2C30;
-	margin-top: 7px;
-}
-
 h3 {
 	font-size: 1.5rem;
 	margin-bottom: 0;
 }
-
-#hero .row p {
-	font-size: 1.25rem;
-}
-
 
 /*-- 1.2 - Body Copy --*/
 
@@ -124,8 +105,8 @@ p {
 	line-height: 1.5rem;
 }
 
-input, textarea {
-	font-size: .9rem;
+#hero .row p {
+	font-size: 1.25rem;
 }
 
 blockquote {
@@ -144,23 +125,10 @@ blockquote footer {
 	font-size: 1rem;
 }
 
-p {
-	margin-top: 0;
-}
 
-p:last-child, blockquote p {
-	margin-bottom: 0;
-}
-
-
-
-#intro {
-	margin-bottom: 50px;
-}
 
 .price {
 	margin: 12px 0 7px;
-	text-align: right;
 	font-size: .9rem;
 }
 
@@ -172,6 +140,10 @@ a {
 
 a:hover {
 	transition: all .75s ease;
+}
+
+#about a:hover, #map a:hover {
+	transition: none;
 }
 
 nav a {
@@ -195,10 +167,6 @@ nav a:hover {
 	padding: 7px 15px;
 }
 
-#hero a:hover, #newsletter a:hover {
-	background-color: #fff;
-}
-
 #hero a:first-child {
 	margin-right: 15px;
 }
@@ -207,12 +175,7 @@ nav a:hover {
 	border: 2px solid #B2D6B5;
 }
 
-#products a:hover {
-	background-color: #B2D6B5;
-}
-
 #map .col-2-5 {
-	background-color: #fff;
     padding: 10px;
     position: absolute;
     right: 10px;
@@ -220,18 +183,15 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-#newsletter form, #newsletter p, #contact h2, #contact a {
-	display: inline-block;
-}
-
-#contact p {
-	display: block;
-}
 
 .col-5-6 .lead-in {
 	padding: 25px 0;
 }
 /*-- 1.4 - Forms --*/
+
+input, textarea {
+	font-size: .9rem;
+}
 
 #newsletter form {
 	margin-top: 25px;
@@ -243,10 +203,6 @@ nav a:hover {
 
 #newsletter label {
 	display: none;
-}
-
-#contact header a {
-	display: block;
 }
 
 #about a, #map a {
@@ -279,7 +235,7 @@ input, textarea {
 	padding: 3px 0px 3px 3px;
 }
 
-input{
+input, textarea {
 	width: 100%;
 }
 
@@ -289,9 +245,6 @@ textarea {
 
 /*-- 1.5 - Lists --*/
 
-li, #hero a, h1, #contact ul {
-	display: inline-block;
-}
 
 nav li {
 	margin-right: 15px;
@@ -303,7 +256,6 @@ nav li:last-child, #contact li:last-child {
 
 nav ul {
 	margin-top: 30px;
-    display: inline-block;
 }
 
 #contact ul {
@@ -323,10 +275,6 @@ nav ul {
 -------------------------------------------------------------- */
 
 /*-- 2.1 - Main Menu --*/
-
-header nav {
-	text-align: right;
-}
 
 /*-- 2.2 - Sub Menu --*/
 
@@ -377,9 +325,7 @@ header nav {
 }
 
 #about {
-	background: url(../img/about-img.jpg) no-repeat center center;
-	background-attachment: fixed;
-	background-position: bottom;
+	background: url(../img/about-img.jpg) no-repeat center bottom fixed;
 }
 
 #logo {
@@ -423,7 +369,7 @@ blockquote {
 	background-color: #2C2C30;
 }
 
-.bg-green {
+.bg-green, #contact a:hover, #products a:hover {
 	background-color: #B2D6B5;
 }
 
@@ -432,38 +378,32 @@ header[class="row"] {
 	padding: 0 15px;
 }
 
+#map .col-2-5, #hero a:hover, #newsletter a:hover {
+	background-color: #fff;
+}
+
 /*-- 5.2 - Text Colors --*/
+
+body, #about a, #map a, #products h3 {
+	color: #2C2C30;
+}
+
+h2, #hero a, #products a:hover, #newsletter a, #contact a:hover {
+	color: #fff;
+}
+
+h2, .bg-blue a, .products a, #hero a:hover, #products a, #contact a, #newsletter a:hover {
+	color: #B2D6B5;
+}
+
+h3, blockquote, .location, #map a:hover, #about a:hover {
+	color: #5F6E75;
+}
+
 
 /*-- 5.3 - Text Sizes --*/
 
 /*-- 5.4 - Alignments --*/
-
-
-#about, #contact {
-	padding-top: 25px;
-}
-
-footer .f-right {
-	position: relative;
-}
-
-body>div:last-child {
-	height: 25px;
-}
-
-.f-left {
-	float: left;
-}
-
-
-
-.col-2-5.full, .col-3-5.full {
-	width: 100%
-}
-
-.clear {
-	clear: both;
-}
 
 *, *:after, *:before {
 	-moz-box-sizing: border-box;
@@ -490,9 +430,58 @@ body>div:last-child {
 	margin-bottom: 20px;
 }
 
+nav ul, li, #hero a, h1, #contact ul, #newsletter form, #newsletter p, #contact h2, #contact a {
+    display: inline-block;
+}
+
+#contact header a, #contact p {
+	display: block;
+}
+
+footer .f-right {
+	position: relative;
+}
+
 .f-right {
 	float: right;
 }
+
+header nav, .price {
+	text-align: right;
+}
+
+p {
+	margin-top: 0;
+}
+
+p:last-child, blockquote p {
+	margin-bottom: 0;
+}
+
+#intro {
+	margin-bottom: 50px;
+}
+
+#products h3 {
+	margin-top: 7px;
+}
+
+#about, #contact {
+	padding-top: 25px;
+}
+
+body>div:last-child {
+	height: 25px;
+}
+
+.col-2-5.full, .col-3-5.full {
+	width: 100%
+}
+
+
+
+
+
 
 .col-center {
 	float: none;
@@ -673,11 +662,19 @@ img, .col-1-1 {
 		width: 33.33%;
 	}
 	
-	nav li {
-		display: block;
-		
+	nav ul {
+		margin-top: 15px;
 	}	
 	
+	nav li {
+		display: block;
+		margin-right: 0;
+		margin-top: 15px;
+	}
+	
+	nav li:first-child {
+		margin-top: 0;
+	}
 	
 	
 	h1, #hero p, #hero  {
@@ -696,6 +693,8 @@ img, .col-1-1 {
 	#map {
 		height: 300px;
 	}
+	
+	
 }
 
 
