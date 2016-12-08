@@ -1,5 +1,7 @@
 @charset "UTF-8";
+
 /* CSS Document */
+
 
 /*--------------------------------------------------------------
 >>> CSS STANDARDS
@@ -28,7 +30,7 @@
 	2.3 - Footer Menu
 3.0 - Content
 	3.1 - Site Structure (Site Header, Advertisement, Site Footer)
-	3.2 - Section Name
+	3.2 - Columns
 	3.3 - Section Name
 4.0 - Media
 5.0 - Utility
@@ -39,143 +41,154 @@
 --------------------------------------------------------------*/
 
 
-
-
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
 
-
-body, #about a, #map a { 
-	font-family: Georgia,Times,Times New Roman,serif;
-	font-variant-ligatures: normal; 
-	-webkit-font-smoothing: antialiased;
+body, #about a, #map a, .lead-in a, blockquote a {
+    font-family: Georgia, Times, Times New Roman, serif;
+    font-variant-ligatures: normal;
+    -webkit-font-smoothing: antialiased;
 }
-
-
 
 h1, h2, h3, a, label, #contact p {
-	font-family: 'Montserrat', sans-serif;
-}
-
-
-
-h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in {
-	text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1, blockquote footer, #products span {
-	font-weight: 400;
+    font-weight: 400;
 }
 
-.lead-in, blockquote, .location, #about a, header .col-2-5.f-right, #map a, .price, label, #contact p {
-	font-weight: 700;
+.lead-in, blockquote, .location, #about a, header .col-2-5.f-right, #map a, .price, label, #contact p, nav a {
+    font-weight: 700;
 }
 
-h1, h2, #hero a, #products a {
-	text-transform: uppercase;
+h1, h2, #hero a, #products .row a {
+    text-transform: uppercase;
 }
+
+h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in {
+    text-align: center;
+}
+
+header nav, .price, #newsletter form {
+    text-align: right;
+}
+
+body, #about a, #map a, #products h3, blockquote a, .lead-in a, nav a:hover {
+    color: #2C2C30;
+}
+
+h2, #hero a, #products .row a:hover, #newsletter a, #contact a:hover {
+    color: #fff;
+}
+
+h2, .bg-dark a, .products a, #hero a:hover, #products .row a, #contact a, #newsletter a:hover {
+    color: #B2D6B5;
+}
+
+h3, blockquote, .location, #map a:hover, #about a:hover, .lead-in a:hover, blockquote a:hover {
+    color: #5F6E75;
+}
+
 
 /*-- 1.1 - Headings --*/
 
 h1 {
-	letter-spacing: 2px;
-	padding: 15px 25px;
-	border: 5px solid rgba(255, 255, 255, 0.8);
-	display: inline-block;
-	font-size: 2.5rem;
-	color: rgba(255, 255, 255, 0.9);
-	margin-top: 125px;
+    letter-spacing: 2px;
+    padding: 15px 25px;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 100px;
 }
 
 h2 {
-	font-size: 2rem;
-	margin: 50px 0 15px;
+    font-size: 2rem;
+    margin: 25px 0 25px;
 }
 
 h3 {
-	font-size: 1.5rem;
-	margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0;
 }
 
 /*-- 1.2 - Body Copy --*/
 
 p {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
 }
 
 #hero .row p {
-	font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 blockquote {
-	font-size: 1.5rem;
-	font-style: italic;
-	line-height: 2rem;
-	padding: 50px 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 2rem;
+    padding: 50px 0;
 }
 
 blockquote footer {
-	font-style: normal;
-	font-size: 1.125rem;
+    font-style: normal;
+    font-size: 1.125rem;
 }
 
 #products span {
-	font-size: 1rem;
+    font-size: 1rem;
 }
-
-
 
 .price {
-	margin: 12px 0 7px;
-	font-size: .9rem;
+    margin: 12px 0 7px;
+    font-size: .9rem;
 }
+
 
 /*-- 1.3 - Buttons --*/
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
-a:hover {
-	transition: all .75s ease;
+nav a, #hero a, #products .row a, #newsletter a {
+    transition: all .5s ease;
 }
 
-#about a:hover, #map a:hover {
-	transition: none;
+#contact a {
+    transition: all .8s ease;
 }
 
 nav a {
-	padding: 7px;
+    padding: 7px;
 }
 
 nav a:hover {
-	background-color: rgba(255, 255, 255, 0.8);
-	color: #2C2C30;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 #hero a {
-	margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 #hero a, #newsletter a {
-	border: 2px solid #fff;
+    border: 2px solid #fff;
 }
 
-#hero a, #products a, #contact a, #newsletter a {
-	padding: 7px 15px;
+#hero a, #products .row a, #contact a, #newsletter a {
+    padding: 7px 15px;
 }
 
 #hero a:first-child {
-	margin-right: 15px;
+    margin-right: 15px;
 }
 
-#products a, #contact p a {
-	border: 2px solid #B2D6B5;
+#products .row a, #contact p a {
+    border: 2px solid #B2D6B5;
 }
 
-#map .col-2-5 {
+#map .col-2-3 {
     padding: 10px;
     position: absolute;
     right: 10px;
@@ -183,124 +196,258 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+nav a, #hero a, h2 {
+    letter-spacing: .1125rem;
+}
 
 .col-5-6 .lead-in {
-	padding: 25px 0;
+    padding: 25px 0;
 }
+
+#products .row a {
+	margin-top: 7px;
+}
+
+#contact p a {
+	margin-top: 79px;
+}
+
 /*-- 1.4 - Forms --*/
 
 input, textarea {
-	font-size: .9rem;
+    font-size: .9rem;
 }
 
 #newsletter form {
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
 #newsletter input {
-	width: 70%;
+    width: 70%;
+	margin-right: 20px;
 }
 
 #newsletter label {
-	display: none;
+    display: none;
 }
 
-#about a, #map a {
-	text-decoration: underline;
+#about a, #map a, blockquote a, .lead-in a {
+    text-decoration: underline;
 }
 
-::-webkit-input-placeholder {
-   	font-style: italic;
-	font-size: .75rem;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   	font-style: italic; 
-	font-size: .75rem;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   	font-style: italic;  
-	font-size: .75rem;
-}
-
-:-ms-input-placeholder {  
-   	font-style: italic; 
-	font-size: .75rem;
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+    font-style: italic;
+    font-size: .75rem;
 }
 
 input, textarea {
-	border: 2px solid #5F6E75;
-	border-radius: 5px;
-	padding: 3px 0px 3px 3px;
+    border: 2px solid #5F6E75;
+    border-radius: 5px;
+    padding: 5px 0px 5px 5px;
 }
 
 input, textarea {
-	width: 100%;
+    width: 100%;
 }
 
 textarea {
-	resize: none;
+    resize: none;
+}
+
+#contact .row:last-child {
+	margin-top: 25px;
+}
+
+#contact .col-5-7 p, #contact label {
+	margin-bottom: 3px;
+	font-size: .9rem;
 }
 
 /*-- 1.5 - Lists --*/
 
-
 nav li {
-	margin-right: 15px;
+    margin-right: 15px;
 }
 
 nav li:last-child, #contact li:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 nav ul {
-	margin-top: 30px;
+    margin-top: 35px;
 }
 
 #contact ul {
-	padding-left: 7px;
-	margin-top: -3px;
+    padding-left: 7px;
+    margin-top: -3px;
 }
 
 #contact li {
-	margin-right: 7px;
+    margin-right: 7px;
 }
 
 
 /*-- 1.6 - Tables --*/
 
+
 /*--------------------------------------------------------------
 2.0 - NAVIGATION MENUS
 -------------------------------------------------------------- */
 
+
 /*-- 2.1 - Main Menu --*/
+
 
 /*-- 2.2 - Sub Menu --*/
 
+
 /*-- 2.3 - Footer Menu --*/
+
 
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
 
+
 /*-- 3.1 - Site Structure (Site Header, Advertisement, Site Footer) --*/
 
+#newsletter {
+	padding: 10px 0;
+}
 
-/*-- 3.2 - Section Name --*/
+/*-- 3.2 - Columns --*/
+
+img, .col-1-1 {
+    width: 100%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-2-3 {
+    width: 66.66%;
+}
+
+.col-1-4 {
+    width: 25%;
+}
+
+.col-3-4 {
+    width: 75%;
+}
+
+.col-1-5 {
+    width: 20%;
+}
+
+.col-2-5 {
+    width: 40%;
+}
+
+.col-3-5 {
+    width: 60%;
+}
+
+.col-1-6 {
+    width: 16.66%;
+}
+
+.col-5-6 {
+    width: 83.33%;
+}
+
+.col-1-7 {
+    width: 14.28%;
+}
+
+.col-2-7 {
+    width: 28.57%;
+}
+
+.col-5-7 {
+    width: 71.42%;
+}
+
+.col-1-8 {
+    width: 12.5%;
+}
+
+.col-3-8 {
+    width: 37.5%;
+}
+
+.col-5-8 {
+    width: 62.5%;
+}
+
+.col-1-9 {
+    width: 11.11%;
+}
+
+.col-2-9 {
+    width: 22.22%;
+}
+
+.col-7-9 {
+    width: 77.77%;
+}
+
+.col-1-10 {
+    width: 10%;
+}
+
+.col-3-10 {
+    width: 30%;
+}
+
+.col-7-10 {
+    width: 70%;
+}
+
+.col-1-11 {
+    width: 9.09%;
+}
+
+.col-4-11 {
+    width: 36.36%;
+}
+
+.col-7-11 {
+    width: 63.63%;
+}
+
+.col-1-12 {
+    width: 8.33%;
+}
+
+.col-5-12 {
+    width: 41.66%;
+}
+
+.col-7-12 {
+    width: 58.33%;
+}
+
+[class*='col-']:last-of-type {
+    padding-right: 0px;
+}
+
 
 /*-- 3.3 - Section Name --*/
+
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
 
-
-
 #hero {
-	background: #B2D6B5 url(../img/hero-img.jpg) no-repeat right top fixed;
+    background: url(../img/hero-img.jpg) no-repeat right top fixed;
 }
-
 
 #icon-fb {
     background: url(../img/icon-fb.png) no-repeat;
@@ -325,395 +472,272 @@ nav ul {
 }
 
 #about {
-	background: url(../img/about-img.jpg) no-repeat center bottom fixed;
+    background: url(../img/about-img.jpg) no-repeat center bottom fixed;
 }
 
 #logo {
-	background: url(../img/logo.png) no-repeat;
-	height: 60px;
+    background: url(../img/logo.png) no-repeat;
+    height: 60px;
 }
 
 .roast-img {
-	background: url(../img/img-packaging.jpg) no-repeat center center;
+    background: url(../img/img-packaging.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	height: 150px;
+    height: 150px;
 }
 
 #map {
-	background: url(../img/map-img.jpg) no-repeat center center;
+    background: url(../img/map-img.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	height: 100%;
+    height: 100%;
 }
 
 blockquote {
-	background: url(../img/quote-img.jpg) no-repeat center center;
+    background: url(../img/quote-img.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 
 /*--------------------------------------------------------------
 5.0 - UTILITY
 -------------------------------------------------------------- */
 
+
 /*-- 5.1 - Background Colors --*/
 
-.bg-blue {
-	background-color: #2C2C30;
+.bg-dark {
+    background-color: #2C2C30;
 }
 
-.bg-green, #contact a:hover, #products a:hover {
-	background-color: #B2D6B5;
+.bg-green, #contact a:hover, #products .row a:hover, #products>.row:first-child header[class="row"] {
+    background-color: #B2D6B5;
 }
 
 header[class="row"] {
-	background-color: #B2D6B5;
-	padding: 0 15px;
+    background-color: #A9c1c9;
+    padding: 0 15px;
 }
 
-#map .col-2-5, #hero a:hover, #newsletter a:hover {
-	background-color: #fff;
+#map .col-2-3, #hero a:hover, #newsletter a:hover {
+    background-color: #fff;
 }
+
 
 /*-- 5.2 - Text Colors --*/
 
-body, #about a, #map a, #products h3 {
-	color: #2C2C30;
-}
-
-h2, #hero a, #products a:hover, #newsletter a, #contact a:hover {
-	color: #fff;
-}
-
-h2, .bg-blue a, .products a, #hero a:hover, #products a, #contact a, #newsletter a:hover {
-	color: #B2D6B5;
-}
-
-h3, blockquote, .location, #map a:hover, #about a:hover {
-	color: #5F6E75;
-}
 
 
 /*-- 5.3 - Text Sizes --*/
 
+
 /*-- 5.4 - Alignments --*/
 
 *, *:after, *:before {
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;	
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}	
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .wrapper {
-	margin: 0 auto;
-	width: 70%;	
+    margin: 0 auto;
+    width: 70%;
 }
 
 .row:after {
-	content: "";
-	display: table;
-	clear: both;	
-}	
-
-[class*='col-'] {
-	float: left;	
-	padding-right: 25px;
-	margin-bottom: 20px;
+    content: "";
+    display: table;
+    clear: both;
 }
 
-nav ul, li, #hero a, h1, #contact ul, #newsletter form, #newsletter p, #contact h2, #contact a {
+[class*='col-'] {
+    float: left;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
+
+nav ul, li, #hero a, h1, #contact ul, #newsletter form, #newsletter p, #contact a, #products .row a, #contact label, #contact h2 {
     display: inline-block;
 }
 
 #contact header a, #contact p {
-	display: block;
+    display: block;
 }
 
 footer .f-right {
-	position: relative;
+    position: relative;
 }
 
 .f-right {
-	float: right;
+    float: right;
 }
-
-header nav, .price {
-	text-align: right;
-}
-
-p {
-	margin-top: 0;
-}
-
-p:last-child, blockquote p {
-	margin-bottom: 0;
-}
-
-#intro {
-	margin-bottom: 50px;
-}
-
-#products h3 {
-	margin-top: 7px;
-}
-
-#about, #contact {
-	padding-top: 25px;
-}
-
-body>div:last-child {
-	height: 25px;
-}
-
-.col-2-5.full, .col-3-5.full {
-	width: 100%
-}
-
-
-
-
 
 
 .col-center {
-	float: none;
-	margin: 0 auto;
+    float: none;
+    margin: 0 auto;
 }
 
-img, .col-1-1 {
-	width: 100%;
+#products .col-3-5 header p {
+    margin: 10px 0;
 }
 
-.col-1-2 {
-	width: 50%;	
+p {
+    margin-top: 0;
 }
 
-.col-1-3 {
-	width: 33.33%;	
+p:last-child, blockquote p, .roast-img, footer .col-1-2 {
+    margin-bottom: 0;
 }
 
-.col-2-3 {
-	width: 66.66%;	
+#intro {
+    margin-bottom: 50px;
 }
 
-.col-1-4 {
-	width: 25%;
+#products h3 {
+    margin-top: 7px;
 }
 
-.col-3-4 {
-	width: 75%;
+#about, #products {
+    padding-top: 15px;
 }
 
-.col-1-5 {
-	width: 20%;
+body>div:last-child {
+    height: 25px;
 }
 
-.col-2-5 {
-	width: 40%;
+.col-2-5.full, .col-3-5.full {
+    width: 100%
 }
 
-.col-3-5 {
-	width: 60%;
+header .col-1-6, header nav {
+    margin-bottom: 0;
 }
 
-.col-1-6 {
-	width: 16.66%;
+#hero a {
+    margin: 50px 0 50px 0;
 }
 
-.col-5-6 {
-	width: 83.33%;
-}	
-
-.col-1-7 {
-	width: 14.28%;
+header .col-1-6 {
+    width: 125px;
 }
 
-.col-2-7 {
-	width: 28.57%;
+hero {
+	margin-bottom: 15px
 }
 
-.col-5-7 {
-	width: 71.42%;	
+#contact>.row {
+	text-align: center;
 }
 
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-3-8 {
-	width: 37.5%;
-}
-
-.col-5-8 {
-	width: 62.5%;
-}
-
-.col-1-9 {
-	width: 11.11%;
-}
-
-.col-2-9 {
-	width: 22.22%;
-}
-
-.col-7-9 {
-	width: 77.77%;
-}
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-3-10 {
-	width: 30%;
-}
-
-.col-7-10 {
-	width: 70%;
-}
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-4-11 {
-	width: 36.36%;
-}
-
-.col-7-11 {
-	width: 63.63%;
-}
-
-.col-1-12 {
-	width: 8.33%;
-}
-
-.col-5-12 {
-	width: 41.66%;
-}
-
-.col-7-12 {
-	width: 58.33%;
-}
+/*-- Reused responsive CSS --*/
 
 
-[class*='col-']:last-of-type {
-	padding-right: 0px;
-}
 
-/* Tablet break-point */ 
+/* Mobile break-point */
+
 @media (max-width: 480px) {
+    .wrapper {
+        width: 94%;
+    }
+    .col-1-2.sm, .col-1-3.sm, .col-2-3.sm, .col-1-4.sm, .col-3-4.sm, #hero .col-2-3 {
+        width: 100%;
+    }
+    .col-2-5.full {
+        width: 40%
+    }
+    .col-3-5.full {
+        width: 60%;
+    }
+    .col-1-4, .col-1-10 {
+        width: 50%;
+    }
+    .col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
+        padding-right: 0;
+    }
+    .col-1-8 {
+        width: 25%;
+    }
+    .col-3-4 {
+        width: 75%;
+    }
+    .col-1-6.sm {
+        width: 20%
+    }
+    .col-5-6 {
+        width: 100%
+    }
+    .col-1-7, .col-1-11 {
+        width: 100%;
+    }
+    .col-1-9, .col-1-6, .col-1-12 {
+        width: 33.33%;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    nav li {
+        display: block;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+    nav li:first-child {
+        margin-top: 0;
+    }
+    h1, #hero p, #hero {
+        text-align: center;
+    }
+    #hero .col-2-3 {
+        margin: 0 auto;
+        float: none;
+    }
+    #hero {
+        background-position: center;
+    }
+    #map {
+        height: 300px;
+    }
+    header .col-1-6 {
+        margin-top: 10px;
+    }
+    header ul {
+        margin-bottom: 0;
+    }
 	
-	
-	
-	.wrapper {
-		width: 94%;	
+	#newsletter input {
+    width: 65%;
 	}
 	
-	.col-1-2.sm, .col-1-3.sm, .col-2-3.sm, .col-1-4.sm, .col-3-4.sm, #hero .col-2-3 {
-		width: 100%;
+	#contact .col-1-2:first-child, #contact {
+		padding-right: 0;
 	}
-	
-	.col-2-5.full {
-		width: 40%
-	}
-	
-	.col-3-5.full {
-		width: 60%;
-	}
-	
-	.col-1-4, .col-1-10 {
-		width: 50%;
-	}
-	
-	.col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
-		padding-right: 0;	
-	}
-
-	.col-1-8 {
-		width: 25%;	
-	}
-	
-	.col-3-4 {
-		width: 75%;	
-	}
-
-	.col-1-6.sm {
-		width: 20%	
-	}
-	
-	.col-5-6 {
-		width: 100%	
-	}
-
-	.col-1-7, .col-1-11 {
-		width: 100%;	
-	}
-
-	.col-1-9, .col-1-6, .col-1-12 {
-		width: 33.33%;
-	}
-	
-	nav ul {
-		margin-top: 15px;
-	}	
-	
-	nav li {
-		display: block;
-		margin-right: 0;
-		margin-top: 15px;
-	}
-	
-	nav li:first-child {
-		margin-top: 0;
-	}
-	
-	
-	h1, #hero p, #hero  {
-		text-align: center;
-	}
-	
-	#hero .col-2-3 {
-		margin: 0 auto;
-		float: none;	
-	}
-	
-	#hero {
-		background-position: center;
-	}
-	
-	#map {
-		height: 300px;
-	}
-	
 	
 }
-
 
 @media (min-width: 480px) {
-	
-	.flex {
-    display: -webkit-flex;
-    display: -mz-flex;
-    display: -o-flex;
-    display: -ms-flex;
-    display: flex;
-    overflow: hidden;
-
-	}
-
-	.flex .col-1-3 header {
-	flex: 1;
-	}
+    .flex {
+        display: -webkit-flex;
+        display: -mz-flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: flex;
+        overflow: hidden;
+    }
+    .flex .col-1-3 header {
+        flex: 1;
+    }
 }
+
 
 /* Mobile phone break-point 
 @media (max-width: 320px) {
@@ -721,4 +745,4 @@ img, .col-1-1 {
 		width: 95%	
 	}
 }
-*/ 
+*/
