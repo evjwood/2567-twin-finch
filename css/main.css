@@ -2,18 +2,6 @@
 
 /* CSS Document */
 
-
-/*--------------------------------------------------------------
->>> CSS STANDARDS
-----------------------------------------------------------------
-1. Place in appropriate section
-2. Add new sections to the Table of Contents
-3. Order properties alphabetically inside each declaration
-4. Declaration selectors should each occupy a new line
-5. Enter one new line between declarations
---------------------------------------------------------------*/
-
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -22,22 +10,17 @@
 	1.2 - Body Copy
 	1.3 - Buttons
 	1.4 - Forms
-	1.5 - Lists
-	1.6 - Tables
 2.0 - Navigation Menus
 	2.1 - Main Menu
-	2.2 - Sub Menu
-	2.3 - Footer Menu
+	2.2 - Footer Menu
 3.0 - Content
-	3.1 - Site Structure (Site Header, Advertisement, Site Footer)
+	3.1 - Site Structure
 	3.2 - Columns
-	3.3 - Section Name
 4.0 - Media
 5.0 - Utility
 	5.1 - Background Colors
-	5.2 - Text Colors
-	5.3 - Text Sizes
-	5.4 - Alignments
+	5.2 - Alignments
+	5.3 - Breakpoint
 --------------------------------------------------------------*/
 
 
@@ -59,15 +42,15 @@ h1, blockquote footer, #products span {
     font-weight: 400;
 }
 
-.lead-in, blockquote, .location, #about a, header .col-2-5.f-right, #map a, .price, label, #contact p, nav a {
+.lead-in, .location, #about a, header .col-2-5.f-right, #map a, .price, label, #contact p, nav a {
     font-weight: 700;
 }
 
-h1, h2, #hero a, #products .row a {
+h1, h2, #hero a, #products .row a, #newsletter a, #contact a {
     text-transform: uppercase;
 }
 
-h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in {
+h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in, #contact>.row {
     text-align: center;
 }
 
@@ -91,6 +74,17 @@ h3, blockquote, .location, #map a:hover, #about a:hover, .lead-in a:hover, block
     color: #5F6E75;
 }
 
+.price, input, textarea {
+    font-size: .9rem;
+}
+
+p, blockquote footer, #products span, #contact .col-5-7 p, #contact label {
+	font-size: 1rem;
+}
+
+#hero .row p, blockquote p, #products .lead-in {
+    font-size: 1.25rem;
+}
 
 /*-- 1.1 - Headings --*/
 
@@ -100,49 +94,45 @@ h1 {
     border: 5px solid rgba(255, 255, 255, 0.8);
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.9);
-    margin-top: 100px;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin: 25px 0 25px;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.33rem;
     margin-bottom: 0;
 }
 
 /*-- 1.2 - Body Copy --*/
 
 p {
-    font-size: 1.125rem;
     line-height: 1.5rem;
-}
-
-#hero .row p {
-    font-size: 1.25rem;
+	margin-top: 0;
 }
 
 blockquote {
-    font-size: 1.5rem;
+    padding: 75px 0;
+}
+
+blockquote p {
     font-style: italic;
-    line-height: 2rem;
-    padding: 50px 0;
+    line-height: 1.55rem;
 }
 
 blockquote footer {
     font-style: normal;
-    font-size: 1.125rem;
+	padding-top: 10px;
 }
 
-#products span {
-    font-size: 1rem;
+#products .lead-in {
+	margin-top: -10px;
 }
 
 .price {
     margin: 12px 0 7px;
-    font-size: .9rem;
 }
 
 
@@ -153,11 +143,17 @@ a {
 }
 
 nav a, #hero a, #products .row a, #newsletter a {
-    transition: all .5s ease;
+    -webkit-transition: background-color.5s ease;
+    -moz-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+	transition: background-color .5s ease;
 }
 
 #contact a {
     transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
 }
 
 nav a {
@@ -169,7 +165,7 @@ nav a:hover {
 }
 
 #hero a {
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 
 #hero a, #newsletter a {
@@ -180,28 +176,12 @@ nav a:hover {
     padding: 7px 15px;
 }
 
-#hero a:first-child {
-    margin-right: 15px;
-}
-
 #products .row a, #contact p a {
     border: 2px solid #B2D6B5;
 }
 
-#map .col-2-3 {
-    padding: 10px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    margin-bottom: 0;
-}
-
-nav a, #hero a, h2 {
-    letter-spacing: .1125rem;
-}
-
-.col-5-6 .lead-in {
-    padding: 25px 0;
+nav a, #hero a, #products .row a {
+    letter-spacing: .125rem;
 }
 
 #products .row a {
@@ -213,10 +193,6 @@ nav a, #hero a, h2 {
 }
 
 /*-- 1.4 - Forms --*/
-
-input, textarea {
-    font-size: .9rem;
-}
 
 #newsletter form {
     margin-top: 25px;
@@ -254,40 +230,6 @@ textarea {
     resize: none;
 }
 
-#contact .row:last-child {
-	margin-top: 25px;
-}
-
-#contact .col-5-7 p, #contact label {
-	margin-bottom: 3px;
-	font-size: .9rem;
-}
-
-/*-- 1.5 - Lists --*/
-
-nav li {
-    margin-right: 15px;
-}
-
-nav li:last-child, #contact li:last-child {
-    margin-right: 0;
-}
-
-nav ul {
-    margin-top: 35px;
-}
-
-#contact ul {
-    padding-left: 7px;
-    margin-top: -3px;
-}
-
-#contact li {
-    margin-right: 7px;
-}
-
-
-/*-- 1.6 - Tables --*/
 
 
 /*--------------------------------------------------------------
@@ -298,22 +240,100 @@ nav ul {
 /*-- 2.1 - Main Menu --*/
 
 
-/*-- 2.2 - Sub Menu --*/
+nav li:last-child, #contact li:last-child {
+    margin-right: 0;
+}
 
+nav ul {
+    margin-top: 35px;
+}
 
-/*-- 2.3 - Footer Menu --*/
+/*-- 2.2 - Footer Menu --*/
 
+#contact ul {
+    padding-left: 7px;
+    margin-top: -3px;
+}
+
+#contact li {
+    margin-right: 7px;
+}
 
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
 
 
-/*-- 3.1 - Site Structure (Site Header, Advertisement, Site Footer) --*/
+/*-- 3.1 - Site Structure --*/
+
+header .col-1-6, header nav, #products .col-1-2, p:last-child, blockquote p, .roast-img, footer .col-1-2, #map .col-2-3 {
+    margin-bottom: 0;
+}
+
+header[class="row"], #products .bg-green {
+	 padding: 0 15px;
+}
+
+#products .col-2-5 {
+	margin-bottom: 0;
+}
 
 #newsletter {
 	padding: 10px 0;
 }
+
+#products .col-3-5 header p {
+    margin: 15px 0;
+}
+
+#intro {
+    margin-bottom: 50px;
+}
+
+#products h3, #products .row a  {
+    margin-top: 7px;
+}
+
+#about, #products, #contact {
+    padding-top: 15px;
+}
+
+#hero a {
+    margin-top: 50px;
+}
+
+#hero a:first-child {
+	margin-right: 15px;
+}
+
+#hero {
+	padding: 75px 0;
+}
+
+header .col-1-6 {
+    width: 125px;
+}
+
+.col-5-6 .lead-in {
+    padding: 25px 0;
+}
+
+hero {
+	margin-bottom: 15px
+}
+
+body>div:last-child {
+    height: 25px;
+}
+
+#contact .row:last-child {
+	margin-top: 15px;
+}
+
+#contact .col-5-7 p, #contact label {
+	margin-bottom: 3px;
+}
+
 
 /*-- 3.2 - Columns --*/
 
@@ -433,20 +453,20 @@ img, .col-1-1 {
     width: 58.33%;
 }
 
+.col-2-5.full, .col-3-5.full {
+    width: 100%
+}
+
 [class*='col-']:last-of-type {
     padding-right: 0px;
 }
-
-
-/*-- 3.3 - Section Name --*/
-
 
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
 
 #hero {
-    background: url(../img/hero-img.jpg) no-repeat right top fixed;
+    background: #B2D6B5 url(../img/hero-img.jpg) no-repeat right top fixed;
 }
 
 #icon-fb {
@@ -524,22 +544,13 @@ blockquote {
 
 header[class="row"] {
     background-color: #A9c1c9;
-    padding: 0 15px;
 }
 
 #map .col-2-3, #hero a:hover, #newsletter a:hover {
     background-color: #fff;
 }
 
-
-/*-- 5.2 - Text Colors --*/
-
-
-
-/*-- 5.3 - Text Sizes --*/
-
-
-/*-- 5.4 - Alignments --*/
+/*-- 5.2 - Alignments --*/
 
 *, *:after, *:before {
     -moz-box-sizing: border-box;
@@ -582,74 +593,107 @@ footer .f-right {
     float: right;
 }
 
-
 .col-center {
     float: none;
     margin: 0 auto;
 }
 
-#products .col-3-5 header p {
-    margin: 10px 0;
-}
-
-p {
-    margin-top: 0;
-}
-
-p:last-child, blockquote p, .roast-img, footer .col-1-2 {
-    margin-bottom: 0;
-}
-
-#intro {
-    margin-bottom: 50px;
-}
-
-#products h3 {
-    margin-top: 7px;
-}
-
-#about, #products {
-    padding-top: 15px;
-}
-
-body>div:last-child {
-    height: 25px;
-}
-
-.col-2-5.full, .col-3-5.full {
-    width: 100%
-}
-
-header .col-1-6, header nav {
-    margin-bottom: 0;
-}
-
-#hero a {
-    margin: 50px 0 50px 0;
-}
-
-header .col-1-6 {
-    width: 125px;
-}
-
-hero {
-	margin-bottom: 15px
-}
-
-#contact>.row {
-	text-align: center;
-}
-
-/*-- Reused responsive CSS --*/
 
 
-
-/* Mobile break-point */
+/*-- 5.3 Breakpoint --*/
 
 @media (max-width: 480px) {
-    .wrapper {
+    
+		/*--------------------------------------------------------------
+	>>> TABLE OF CONTENTS:
+	----------------------------------------------------------------
+	
+	1.0 - Typography
+	2.0 - Navigation Menus
+	3.0 - Content
+		3.1 - Site Structure
+		3.2 - Columns
+	4.0 - Media
+
+	--------------------------------------------------------------*/
+	
+	/*--------------------------------------------------------------
+	1.0 TYPOGRAPHY
+	-------------------------------------------------------------- */
+	
+	h1, #hero p, #hero {
+        text-align: center;
+    }
+	
+	/*--------------------------------------------------------------
+	2.0 NAVIGATION MENUS
+	-------------------------------------------------------------- */
+		
+	nav ul {
+        margin-top: 15px;
+    }
+	
+    nav li {
+        display: block;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+	
+    nav li:first-child {
+        margin-top: 0;
+    }
+	
+	/*--------------------------------------------------------------
+	3.0 CONTENT
+	-------------------------------------------------------------- */
+	
+	/*-- 3.1 Site Structure --*/
+	
+	.wrapper {
         width: 94%;
     }
+	
+	#hero .col-2-3 {
+        margin: 0 auto;
+        float: none;
+    }
+	
+	.col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
+        padding-right: 0;
+    }
+	
+	header .col-1-6 {
+        margin-top: 10px;
+    }
+	
+    header ul {
+        margin-bottom: 0;
+    }
+	
+	#newsletter input {
+    	width: 65%;
+	}
+	
+	#contact .col-1-2:first-child, #contact, .col-1-3.sm, .col-1-2.sm {
+		padding-right: 0;
+	}
+	
+	#contact label, #contact row:nth-child(2) {
+		margin-top: 15px;
+	}
+	
+	#newsletter .col-2-3 {
+		margin-top: 0;
+	}
+	
+	#contact, #products, blockquote {
+		width: 85%;
+		float: none;
+		margin: 0 auto
+	}
+	
+	/* 3.2 Columns */
+	
     .col-1-2.sm, .col-1-3.sm, .col-2-3.sm, .col-1-4.sm, .col-3-4.sm, #hero .col-2-3 {
         width: 100%;
     }
@@ -661,9 +705,6 @@ hero {
     }
     .col-1-4, .col-1-10 {
         width: 50%;
-    }
-    .col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
-        padding-right: 0;
     }
     .col-1-8 {
         width: 25%;
@@ -683,44 +724,18 @@ hero {
     .col-1-9, .col-1-6, .col-1-12 {
         width: 33.33%;
     }
-    nav ul {
-        margin-top: 15px;
-    }
-    nav li {
-        display: block;
-        margin-right: 0;
-        margin-top: 15px;
-    }
-    nav li:first-child {
-        margin-top: 0;
-    }
-    h1, #hero p, #hero {
-        text-align: center;
-    }
-    #hero .col-2-3 {
-        margin: 0 auto;
-        float: none;
-    }
+    
+	/*--------------------------------------------------------------
+	4.0 MEDIA
+	-------------------------------------------------------------- */
+    
     #hero {
-        background-position: center;
+        background-position: top center;
     }
+	
     #map {
         height: 300px;
     }
-    header .col-1-6 {
-        margin-top: 10px;
-    }
-    header ul {
-        margin-bottom: 0;
-    }
-	
-	#newsletter input {
-    width: 65%;
-	}
-	
-	#contact .col-1-2:first-child, #contact {
-		padding-right: 0;
-	}
 	
 }
 
@@ -733,9 +748,13 @@ hero {
         display: flex;
         overflow: hidden;
     }
-    .flex .col-1-3 header {
+    .flex .col-1-2, .flex .col-1-3 {
         flex: 1;
     }
+	
+	blockquote {
+    background-size: 500px;
+	}
 }
 
 
