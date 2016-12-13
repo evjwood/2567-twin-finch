@@ -42,7 +42,7 @@ h1, blockquote footer, #products span {
     font-weight: 400;
 }
 
-.lead-in, .location, #about a, header .col-2-5.f-right, #map a, .price, label, #contact p, nav a {
+.lead-in, .location, #about a, #map a, .price, label, #contact p, nav a {
     font-weight: 700;
 }
 
@@ -54,7 +54,7 @@ h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in, #contact>.row {
     text-align: center;
 }
 
-header nav, .price, #newsletter form {
+header nav, .price, #newsletter form, #contact .col-2-7 p {
     text-align: right;
 }
 
@@ -83,7 +83,7 @@ p, blockquote footer, #products span, #contact .col-5-7 p, #contact label {
 }
 
 #hero .row p, blockquote p, #products .lead-in {
-    font-size: 1.25rem;
+    font-size: 1.175rem;
 }
 
 /*-- 1.1 - Headings --*/
@@ -106,6 +106,8 @@ h3 {
     margin-bottom: 0;
 }
 
+
+
 /*-- 1.2 - Body Copy --*/
 
 p {
@@ -117,7 +119,7 @@ blockquote {
     padding: 75px 0;
 }
 
-blockquote p {
+blockquote>p {
     font-style: italic;
     line-height: 1.55rem;
 }
@@ -135,6 +137,13 @@ blockquote footer {
     margin: 12px 0 7px;
 }
 
+#products h3, #products .row a  {
+    margin-top: 7px;
+}
+
+#contact .col-5-7 p, #contact label {
+	margin-bottom: 3px;
+}
 
 /*-- 1.3 - Buttons --*/
 
@@ -145,23 +154,25 @@ a {
 nav a, #hero a, #products .row a, #newsletter a {
     -webkit-transition: background-color.5s ease;
     -moz-transition: background-color .5s ease;
-    -o-transition: background-color .5s ease;
+    -ms-transition: background-color .5s ease;
+	-o-transition: background-color .5s ease;
 	transition: background-color .5s ease;
 }
 
 #contact a {
-    transition: all .8s ease;
 	-webkit-transition: all .8s ease;
     -moz-transition: all .8s ease;
-    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	transition: all .8s ease;
 }
 
 nav a {
     padding: 7px;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+nav a:hover, #hero a:hover {
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 #hero a {
@@ -192,6 +203,14 @@ nav a, #hero a, #products .row a {
 	margin-top: 79px;
 }
 
+#hero a {
+    margin-top: 50px;
+}
+
+#hero a:first-child {
+	margin-right: 15px;
+}
+
 /*-- 1.4 - Forms --*/
 
 #newsletter form {
@@ -211,7 +230,22 @@ nav a, #hero a, #products .row a {
     text-decoration: underline;
 }
 
-::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+:-ms-placeholder {
+    font-style: italic;
+    font-size: .75rem;
+}
+
+:-moz-placeholder {
+    font-style: italic;
+    font-size: .75rem;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+    font-size: .75rem;
+}
+
+::-webkit-placeholder {
     font-style: italic;
     font-size: .75rem;
 }
@@ -229,7 +263,6 @@ input, textarea {
 textarea {
     resize: none;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -259,12 +292,30 @@ nav ul {
     margin-right: 7px;
 }
 
+
 /*--------------------------------------------------------------
 3.0 - CONTENT
 -------------------------------------------------------------- */
 
 
 /*-- 3.1 - Site Structure --*/
+
+.wrapper {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
 
 header .col-1-6, header nav, #products .col-1-2, p:last-child, blockquote p, .roast-img, footer .col-1-2, #map .col-2-3 {
     margin-bottom: 0;
@@ -282,28 +333,12 @@ header[class="row"], #products .bg-green {
 	padding: 10px 0;
 }
 
-#products .col-3-5 header p {
-    margin: 15px 0;
-}
-
 #intro {
     margin-bottom: 50px;
 }
 
-#products h3, #products .row a  {
-    margin-top: 7px;
-}
-
 #about, #products, #contact {
     padding-top: 15px;
-}
-
-#hero a {
-    margin-top: 50px;
-}
-
-#hero a:first-child {
-	margin-right: 15px;
 }
 
 #hero {
@@ -330,10 +365,9 @@ body>div:last-child {
 	margin-top: 15px;
 }
 
-#contact .col-5-7 p, #contact label {
-	margin-bottom: 3px;
+.bg-dark:last-child {
+	height: 15px;
 }
-
 
 /*-- 3.2 - Columns --*/
 
@@ -353,18 +387,6 @@ img, .col-1-1 {
     width: 66.66%;
 }
 
-.col-1-4 {
-    width: 25%;
-}
-
-.col-3-4 {
-    width: 75%;
-}
-
-.col-1-5 {
-    width: 20%;
-}
-
 .col-2-5 {
     width: 40%;
 }
@@ -381,9 +403,6 @@ img, .col-1-1 {
     width: 83.33%;
 }
 
-.col-1-7 {
-    width: 14.28%;
-}
 
 .col-2-7 {
     width: 28.57%;
@@ -391,66 +410,6 @@ img, .col-1-1 {
 
 .col-5-7 {
     width: 71.42%;
-}
-
-.col-1-8 {
-    width: 12.5%;
-}
-
-.col-3-8 {
-    width: 37.5%;
-}
-
-.col-5-8 {
-    width: 62.5%;
-}
-
-.col-1-9 {
-    width: 11.11%;
-}
-
-.col-2-9 {
-    width: 22.22%;
-}
-
-.col-7-9 {
-    width: 77.77%;
-}
-
-.col-1-10 {
-    width: 10%;
-}
-
-.col-3-10 {
-    width: 30%;
-}
-
-.col-7-10 {
-    width: 70%;
-}
-
-.col-1-11 {
-    width: 9.09%;
-}
-
-.col-4-11 {
-    width: 36.36%;
-}
-
-.col-7-11 {
-    width: 63.63%;
-}
-
-.col-1-12 {
-    width: 8.33%;
-}
-
-.col-5-12 {
-    width: 41.66%;
-}
-
-.col-7-12 {
-    width: 58.33%;
 }
 
 .col-2-5.full, .col-3-5.full {
@@ -495,34 +454,72 @@ img, .col-1-1 {
     background: url(../img/about-img.jpg) no-repeat center bottom fixed;
 }
 
-#logo {
-    background: url(../img/logo.png) no-repeat;
-    height: 60px;
+.col-1-2:first-child .roast-img {
+    background: url(../img/img-packaging-house-blend.jpg) no-repeat center center;
+    -moz-background-size: cover;
+	-ms-background-size: cover;
+    -o-background-size: cover;    
+	-webkit-background-size: cover;
+    background-size: cover;
+    height: 250px;
 }
 
-.roast-img {
-    background: url(../img/img-packaging.jpg) no-repeat center center;
-    -webkit-background-size: cover;
+.col-1-2:last-child .roast-img {
+    background: url(../img/img-packaging-evening-oak.jpg) no-repeat center center;
     -moz-background-size: cover;
-    -o-background-size: cover;
+	-ms-background-size: cover;
+    -o-background-size: cover;    
+	-webkit-background-size: cover;
     background-size: cover;
-    height: 150px;
+    height: 250px;
+}
+
+.col-1-3:first-child .roast-img {
+    background: url(../img/img-packaging-sunrise.jpg) no-repeat center center;
+    -moz-background-size: cover;
+	-ms-background-size: cover;
+    -o-background-size: cover;    
+	-webkit-background-size: cover;
+    background-size: cover;
+    height: 250px;
+}
+
+.col-1-3:nth-child(2) .roast-img {
+    background: url(../img/img-packaging-midnight.jpg) no-repeat center center;
+    -moz-background-size: cover;
+	-ms-background-size: cover;
+    -o-background-size: cover;    
+	-webkit-background-size: cover;
+    background-size: cover;
+    height: 250px;
+}
+
+.col-1-3:last-child .roast-img {
+    background: url(../img/img-packaging-espresso.jpg) no-repeat center center;
+    -moz-background-size: cover;
+	-ms-background-size: cover;
+    -o-background-size: cover;    
+	-webkit-background-size: cover;
+    background-size: cover;
+    height: 250px;
 }
 
 #map {
     background: url(../img/map-img.jpg) no-repeat center center;
-    -webkit-background-size: cover;
     -moz-background-size: cover;
+	-ms-background-size: cover;
     -o-background-size: cover;
+	-webkit-background-size: cover;
     background-size: cover;
     height: 100%;
 }
 
 blockquote {
     background: url(../img/quote-img.jpg) no-repeat center center;
-    -webkit-background-size: cover;
     -moz-background-size: cover;
+	-ms-background-size: cover;
     -o-background-size: cover;
+	-webkit-background-size: cover;
     background-size: cover;
 }
 
@@ -546,7 +543,7 @@ header[class="row"] {
     background-color: #A9c1c9;
 }
 
-#map .col-2-3, #hero a:hover, #newsletter a:hover {
+#map .col-2-3, #newsletter a:hover {
     background-color: #fff;
 }
 
@@ -560,23 +557,6 @@ header[class="row"] {
     box-sizing: border-box;
 }
 
-.wrapper {
-    margin: 0 auto;
-    width: 70%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-[class*='col-'] {
-    float: left;
-    padding-right: 25px;
-    margin-bottom: 20px;
-}
-
 nav ul, li, #hero a, h1, #contact ul, #newsletter form, #newsletter p, #contact a, #products .row a, #contact label, #contact h2 {
     display: inline-block;
 }
@@ -585,11 +565,18 @@ nav ul, li, #hero a, h1, #contact ul, #newsletter form, #newsletter p, #contact 
     display: block;
 }
 
-footer .f-right {
+#map {
     position: relative;
 }
 
-.f-right {
+#map .col-2-3 {
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	padding: 10px;
+}
+
+header .col-1-2 {
     float: right;
 }
 
@@ -597,8 +584,6 @@ footer .f-right {
     float: none;
     margin: 0 auto;
 }
-
-
 
 /*-- 5.3 Breakpoint --*/
 
@@ -621,7 +606,7 @@ footer .f-right {
 	1.0 TYPOGRAPHY
 	-------------------------------------------------------------- */
 	
-	h1, #hero p, #hero {
+	h1, #hero {
         text-align: center;
     }
 	
@@ -703,23 +688,8 @@ footer .f-right {
     .col-3-5.full {
         width: 60%;
     }
-    .col-1-4, .col-1-10 {
-        width: 50%;
-    }
-    .col-1-8 {
-        width: 25%;
-    }
-    .col-3-4 {
-        width: 75%;
-    }
-    .col-1-6.sm {
-        width: 20%
-    }
     .col-5-6 {
         width: 100%
-    }
-    .col-1-7, .col-1-11 {
-        width: 100%;
     }
     .col-1-9, .col-1-6, .col-1-12 {
         width: 33.33%;
@@ -756,12 +726,3 @@ footer .f-right {
     background-size: 500px;
 	}
 }
-
-
-/* Mobile phone break-point 
-@media (max-width: 320px) {
-	.wrapper {
-		width: 95%	
-	}
-}
-*/
