@@ -2,6 +2,7 @@
 
 /* CSS Document */
 
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -50,7 +51,7 @@ h1, h2, #hero a, #products .row a, #newsletter a, #contact a {
     text-transform: uppercase;
 }
 
-h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in, #contact>.row {
+h2, #intro, blockquote, #products .lead-in, .col-5-6 .lead-in, #contact>.row, #contact>div {
     text-align: center;
 }
 
@@ -79,12 +80,17 @@ h3, blockquote, .location, #map a:hover, #about a:hover, .lead-in a:hover, block
 }
 
 p, blockquote footer, #products span, #contact .col-5-7 p, #contact label {
-	font-size: 1rem;
+    font-size: 1rem;
 }
 
-#hero .row p, blockquote p, #products .lead-in {
+#hero .row p, blockquote>p, #products .lead-in {
     font-size: 1.175rem;
 }
+
+blockquote>p {
+    font-size: 1.33rem;
+}
+
 
 /*-- 1.1 - Headings --*/
 
@@ -98,7 +104,7 @@ h1 {
 
 h2 {
     font-size: 1.75rem;
-    margin: 25px 0 25px;
+    margin: 50px 0 25px;
 }
 
 h3 {
@@ -106,13 +112,20 @@ h3 {
     margin-bottom: 0;
 }
 
+#map h3 {
+    margin-top: 0;
+}
+
+#about h3 {
+    margin: 20px 0 10px;
+}
 
 
 /*-- 1.2 - Body Copy --*/
 
 p {
     line-height: 1.5rem;
-	margin-top: 0;
+    margin-top: 0;
 }
 
 blockquote {
@@ -121,29 +134,34 @@ blockquote {
 
 blockquote>p {
     font-style: italic;
-    line-height: 1.55rem;
+    line-height: 1.75rem;
 }
 
 blockquote footer {
     font-style: normal;
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 #products .lead-in {
-	margin-top: -10px;
+    margin-top: -10px;
 }
 
 .price {
     margin: 12px 0 7px;
 }
 
-#products h3, #products .row a  {
+#products h3, #products .row a {
     margin-top: 7px;
 }
 
 #contact .col-5-7 p, #contact label {
-	margin-bottom: 3px;
+    margin-bottom: 3px;
 }
+
+blockquote.col-5-6 {
+    margin: 15px auto 30px;
+}
+
 
 /*-- 1.3 - Buttons --*/
 
@@ -155,16 +173,16 @@ nav a, #hero a, #products .row a, #newsletter a {
     -webkit-transition: background-color.5s ease;
     -moz-transition: background-color .5s ease;
     -ms-transition: background-color .5s ease;
-	-o-transition: background-color .5s ease;
-	transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease;
 }
 
 #contact a {
-	-webkit-transition: all .8s ease;
+    -webkit-transition: all .8s ease;
     -moz-transition: all .8s ease;
     -ms-transition: all .8s ease;
-	-o-transition: all .8s ease;
-	transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
 }
 
 nav a {
@@ -195,12 +213,8 @@ nav a, #hero a, #products .row a {
     letter-spacing: .125rem;
 }
 
-#products .row a {
-	margin-top: 7px;
-}
-
 #contact p a {
-	margin-top: 79px;
+    margin-top: 79px;
 }
 
 #hero a {
@@ -208,18 +222,29 @@ nav a, #hero a, #products .row a {
 }
 
 #hero a:first-child {
-	margin-right: 15px;
+    margin-right: 15px;
 }
+
+#icon-fb, #icon-twitter, #icon-google {
+    height: 35px;
+    width: 35px;
+    background-position: 0 0;
+}
+
+#icon-fb:hover, #icon-twitter:hover, #icon-google:hover {
+    background-position: 0 -35px;
+}
+
 
 /*-- 1.4 - Forms --*/
 
 #newsletter form {
-    margin-top: 25px;
+    margin: 18px 0 0;
 }
 
 #newsletter input {
     width: 70%;
-	margin-right: 20px;
+    margin-right: 20px;
 }
 
 #newsletter label {
@@ -230,12 +255,7 @@ nav a, #hero a, #products .row a {
     text-decoration: underline;
 }
 
-:-ms-placeholder {
-    font-style: italic;
-    font-size: .75rem;
-}
-
-:-moz-placeholder {
+::-webkit-input-placeholder {
     font-style: italic;
     font-size: .75rem;
 }
@@ -245,7 +265,7 @@ nav a, #hero a, #products .row a {
     font-size: .75rem;
 }
 
-::-webkit-placeholder {
+::-ms-placeholder {
     font-style: italic;
     font-size: .75rem;
 }
@@ -254,6 +274,7 @@ input, textarea {
     border: 2px solid #5F6E75;
     border-radius: 5px;
     padding: 5px 0px 5px 5px;
+    margin-bottom: 10px;
 }
 
 input, textarea {
@@ -272,6 +293,9 @@ textarea {
 
 /*-- 2.1 - Main Menu --*/
 
+nav li {
+    margin-right: 10px;
+}
 
 nav li:last-child, #contact li:last-child {
     margin-right: 0;
@@ -279,7 +303,13 @@ nav li:last-child, #contact li:last-child {
 
 nav ul {
     margin-top: 35px;
+    padding-left: 0;
 }
+
+header .bg-dark {
+    padding: 7px 0;
+}
+
 
 /*-- 2.2 - Footer Menu --*/
 
@@ -322,15 +352,19 @@ header .col-1-6, header nav, #products .col-1-2, p:last-child, blockquote p, .ro
 }
 
 header[class="row"], #products .bg-green {
-	 padding: 0 15px;
+    padding: 12px 25px;
 }
 
 #products .col-2-5 {
-	margin-bottom: 0;
+    margin-bottom: 0;
+}
+
+#products .col-3-5 {
+    margin-top: 25px;
 }
 
 #newsletter {
-	padding: 10px 0;
+    padding: 10px 0;
 }
 
 #intro {
@@ -342,7 +376,7 @@ header[class="row"], #products .bg-green {
 }
 
 #hero {
-	padding: 75px 0;
+    padding: 75px 0;
 }
 
 header .col-1-6 {
@@ -350,28 +384,25 @@ header .col-1-6 {
 }
 
 .col-5-6 .lead-in {
-    padding: 25px 0;
-}
-
-hero {
-	margin-bottom: 15px
-}
-
-body>div:last-child {
-    height: 25px;
+    padding: 66px 0;
 }
 
 #contact .row:last-child {
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
-.bg-dark:last-child {
-	height: 15px;
+.bg-dark:last-of-type {
+    height: 20px;
 }
+
+#products header .col-2-3, #products header .col-1-3 {
+    margin-bottom: 3px;
+}
+
 
 /*-- 3.2 - Columns --*/
 
-img, .col-1-1 {
+img {
     width: 100%;
 }
 
@@ -403,7 +434,6 @@ img, .col-1-1 {
     width: 83.33%;
 }
 
-
 .col-2-7 {
     width: 28.57%;
 }
@@ -420,12 +450,17 @@ img, .col-1-1 {
     padding-right: 0px;
 }
 
+
 /*--------------------------------------------------------------
 4.0 - MEDIA
 -------------------------------------------------------------- */
 
+.parallax {
+    padding-bottom: 100px;
+}
+
 #hero {
-    background: #B2D6B5 url(../img/hero-img.jpg) no-repeat right top fixed;
+    background: #B2D6B5 url(../img/hero-img.jpg) no-repeat right top;
 }
 
 #icon-fb {
@@ -440,87 +475,58 @@ img, .col-1-1 {
     background: url(../img/icon-google.png) no-repeat;
 }
 
-#icon-fb, #icon-twitter, #icon-google {
-    height: 35px;
-    width: 35px;
-    background-position: 0 0;
-}
-
-#icon-fb:hover, #icon-twitter:hover, #icon-google:hover {
-    background-position: 0 -35px;
-}
-
 #about {
-    background: url(../img/about-img.jpg) no-repeat center bottom fixed;
+    background: url(../img/about-img.jpg) no-repeat center center;
+    margin-bottom: -86px;
 }
 
 .col-1-2:first-child .roast-img {
     background: url(../img/img-packaging-house-blend.jpg) no-repeat center center;
-    -moz-background-size: cover;
-	-ms-background-size: cover;
-    -o-background-size: cover;    
-	-webkit-background-size: cover;
-    background-size: cover;
-    height: 250px;
 }
 
 .col-1-2:last-child .roast-img {
     background: url(../img/img-packaging-evening-oak.jpg) no-repeat center center;
-    -moz-background-size: cover;
-	-ms-background-size: cover;
-    -o-background-size: cover;    
-	-webkit-background-size: cover;
-    background-size: cover;
-    height: 250px;
 }
 
 .col-1-3:first-child .roast-img {
     background: url(../img/img-packaging-sunrise.jpg) no-repeat center center;
-    -moz-background-size: cover;
-	-ms-background-size: cover;
-    -o-background-size: cover;    
-	-webkit-background-size: cover;
-    background-size: cover;
-    height: 250px;
 }
 
 .col-1-3:nth-child(2) .roast-img {
     background: url(../img/img-packaging-midnight.jpg) no-repeat center center;
-    -moz-background-size: cover;
-	-ms-background-size: cover;
-    -o-background-size: cover;    
-	-webkit-background-size: cover;
-    background-size: cover;
-    height: 250px;
 }
 
 .col-1-3:last-child .roast-img {
     background: url(../img/img-packaging-espresso.jpg) no-repeat center center;
-    -moz-background-size: cover;
-	-ms-background-size: cover;
-    -o-background-size: cover;    
-	-webkit-background-size: cover;
-    background-size: cover;
-    height: 250px;
 }
 
 #map {
     background: url(../img/map-img.jpg) no-repeat center center;
-    -moz-background-size: cover;
-	-ms-background-size: cover;
-    -o-background-size: cover;
-	-webkit-background-size: cover;
-    background-size: cover;
     height: 100%;
 }
 
 blockquote {
     background: url(../img/quote-img.jpg) no-repeat center center;
+}
+
+.col-1-2:first-child .roast-img, .col-1-2:last-child .roast-img, .col-1-3:first-child .roast-img, .col-1-3:nth-child(2) .roast-img, .col-1-3:last-child .roast-img, blockquote {
+    -moz-background-size: contain;
+    -ms-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+#map {
     -moz-background-size: cover;
-	-ms-background-size: cover;
+    -ms-background-size: cover;
     -o-background-size: cover;
-	-webkit-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
+}
+
+.col-1-2:first-child .roast-img, .col-1-2:last-child .roast-img, .col-1-3:first-child .roast-img, .col-1-3:nth-child(2) .roast-img, .col-1-3:last-child .roast-img {
+    height: 250px;
 }
 
 
@@ -547,6 +553,7 @@ header[class="row"] {
     background-color: #fff;
 }
 
+
 /*-- 5.2 - Alignments --*/
 
 *, *:after, *:before {
@@ -570,10 +577,10 @@ nav ul, li, #hero a, h1, #contact ul, #newsletter form, #newsletter p, #contact 
 }
 
 #map .col-2-3 {
-	position: absolute;
-	right: 15px;
-	bottom: 15px;
-	padding: 10px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 10px;
 }
 
 header .col-1-2 {
@@ -585,11 +592,11 @@ header .col-1-2 {
     margin: 0 auto;
 }
 
-/*-- 5.3 Breakpoint --*/
+
+/*-- 5.3  Mobile Breakpoint --*/
 
 @media (max-width: 480px) {
-    
-		/*--------------------------------------------------------------
+    /*--------------------------------------------------------------
 	>>> TABLE OF CONTENTS:
 	----------------------------------------------------------------
 	
@@ -601,113 +608,95 @@ header .col-1-2 {
 	4.0 - Media
 
 	--------------------------------------------------------------*/
-	
-	/*--------------------------------------------------------------
+    /*--------------------------------------------------------------
 	1.0 TYPOGRAPHY
 	-------------------------------------------------------------- */
-	
-	h1, #hero {
+    body {
+        font-size: 1.15rem
+    }
+    h1, #hero, header .col-1-2, #newsletter h3 {
         text-align: center;
     }
-	
-	/*--------------------------------------------------------------
+    #products .row a {
+        margin-bottom: 20px;
+    }
+    /*--------------------------------------------------------------
 	2.0 NAVIGATION MENUS
 	-------------------------------------------------------------- */
-		
-	nav ul {
-        margin-top: 15px;
-    }
-	
     nav li {
-        display: block;
-        margin-right: 0;
-        margin-top: 15px;
+        display: inline-block;
     }
-	
     nav li:first-child {
         margin-top: 0;
     }
-	
-	/*--------------------------------------------------------------
+    header .col-1-2, header .col-1-6 {
+        margin-top: -7px;
+    }
+    header .col-1-6 {
+        margin-top: -7px;
+    }
+    /*--------------------------------------------------------------
 	3.0 CONTENT
 	-------------------------------------------------------------- */
-	
-	/*-- 3.1 Site Structure --*/
-	
-	.wrapper {
-        width: 94%;
+    /*-- 3.1 Site Structure --*/
+    .wrapper {
+        width: 87%;
     }
-	
-	#hero .col-2-3 {
+    #hero .col-2-3, header .col-1-6, #contact, #products, blockquote, header .col-1-2 {
         margin: 0 auto;
         float: none;
     }
-	
-	.col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
+    .col-1-4:nth-child(2), .col-1-6:nth-child(3), .col-1-7, .col-1-8:nth-child(4), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(2), .col-1-10:nth-child(4), .col-1-10:nth-child(6), .col-1-10:nth-child(8), .col-1-11, .col-1-12:nth-child(3), .col-1-12:nth-child(6), .col-1-12:nth-child(9) {
         padding-right: 0;
     }
-	
-	header .col-1-6 {
-        margin-top: 10px;
-    }
-	
     header ul {
+        margin: 12px 0;
+    }
+    #newsletter input {
+        width: 65%;
+    }
+    #contact .col-1-2:first-child, #contact, .col-1-3.sm, .col-1-2.sm {
+        padding-right: 0;
+    }
+    #contact label, #contact row:nth-child(2) {
+        margin-top: 15px;
+    }
+    #newsletter .col-2-3 {
+        margin-top: 0;
+    }
+    #about .col-1-2:last-child {
         margin-bottom: 0;
     }
-	
-	#newsletter input {
-    	width: 65%;
-	}
-	
-	#contact .col-1-2:first-child, #contact, .col-1-3.sm, .col-1-2.sm {
-		padding-right: 0;
-	}
-	
-	#contact label, #contact row:nth-child(2) {
-		margin-top: 15px;
-	}
-	
-	#newsletter .col-2-3 {
-		margin-top: 0;
-	}
-	
-	#contact, #products, blockquote {
-		width: 85%;
-		float: none;
-		margin: 0 auto
-	}
-	
-	/* 3.2 Columns */
-	
-    .col-1-2.sm, .col-1-3.sm, .col-2-3.sm, .col-1-4.sm, .col-3-4.sm, #hero .col-2-3 {
+    /* 3.2 Columns */
+    .col-1-2.sm, .col-1-3.sm, .col-2-3.sm, .col-1-4.sm, .col-3-4.sm, #hero .col-2-3, header .col-1-2, .col-5-6 {
         width: 100%;
     }
     .col-2-5.full {
-        width: 40%
+        width: 40%;
     }
     .col-3-5.full {
         width: 60%;
     }
     .col-5-6 {
-        width: 100%
+        background-size: cover;
     }
     .col-1-9, .col-1-6, .col-1-12 {
         width: 33.33%;
     }
-    
-	/*--------------------------------------------------------------
+    .col-2-3 input {
+        float: left;
+    }
+    /*--------------------------------------------------------------
 	4.0 MEDIA
 	-------------------------------------------------------------- */
     
-    #hero {
-        background-position: top center;
-    }
-	
     #map {
         height: 300px;
     }
-	
 }
+
+
+/*-- 5.3  Full Display Breakpoint --*/
 
 @media (min-width: 480px) {
     .flex {
@@ -721,8 +710,16 @@ header .col-1-2 {
     .flex .col-1-2, .flex .col-1-3 {
         flex: 1;
     }
-	
-	blockquote {
-    background-size: 500px;
-	}
+    blockquote.col-5-6 {
+        background-size: 550px;
+    }
+    #about .col-1-2 {
+        margin-bottom: 0;
+    }
+    #products .col-1-3 .col-3-5.full {
+        margin-top: 0;
+    }
+    #about h3 {
+        margin-top: 0
+    }
 }
